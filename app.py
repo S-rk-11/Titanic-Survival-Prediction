@@ -3,10 +3,14 @@ import pandas as pd
 import numpy as np
 import pickle
 
-model = pickle.load(open('logistic_model.pkl', 'rb'))
-scaler = pickle.load(open('scaler.pkl', 'rb'))
+# Load Model and Scaler
+with open ("models/logistic_model.pkl", "rb") as f:
+  model = pickle.load(f)
 
-st.title("Titanic Survival Prediction App 🚢")
+with open ("models/scaler.pkl", "rb") as f:
+  scaler = pickle.load(f)
+
+st.title("Titanic Survival Prediction")
 
 Pclass = st.selectbox("Passenger Class (Pclass)", [1, 2, 3])
 Sex = st.selectbox("Sex", ["male", "female"])
