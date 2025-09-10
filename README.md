@@ -5,7 +5,7 @@ This project predicts whether a passenger would have survived the Titanic disast
 It demonstrates the machine learning workflow: preprocessing, model training, evaluation, and deployment with Streamlit.  
 
 ## Project Structure
-titanic-survival-prediction/
+titanic-survival-prediction/   
 ├─ models/                  # Saved models & scaler   
 │  ├─ logistic_model.pkl   
 │  └─ scaler.pkl   
