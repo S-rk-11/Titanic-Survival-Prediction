@@ -12,8 +12,9 @@ st.set_page_config(
 )
 
 # Background Image
-with open(titanic_bg.jpg.png, "rb") as f:
+with open(titanic_bg.jpg, "rb") as f:
   encoded_string = base64.b64encode(f.read())
+  
 st.markdown(
   f"""
   <style>
