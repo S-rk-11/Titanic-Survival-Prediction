@@ -6,14 +6,14 @@ It demonstrates the machine learning workflow: preprocessing, model training, ev
 
 ## Project Structure
 titanic-survival-prediction/  
-├─ models/ 
-│  └─ logistic_model.pkl 
-│  └─ scaler.pkl 
-├─ data/ 
-│  └─ Titanic.csv 
-├─ app.py 
-├─ requirements.txt 
-├─ README.md 
+├─ models/  
+│  └─ logistic_model.pkl  
+│  └─ scaler.pkl  
+├─ data/  
+│  └─ Titanic.csv  
+├─ app.py  
+├─ requirements.txt  
+├─ README.md  
 
 ## Workflow
 - **Data Preprocessing**: handling missing values, encoding categorical variables, scaling  
