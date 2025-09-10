@@ -7,7 +7,7 @@ It demonstrates the machine learning workflow: preprocessing, model training, ev
 ## Project Structure
 titanic-survival-prediction/  
 ├─ models/  
-│  ├─ logistic_model.pkl  
+│  └─ logistic_model.pkl  
 │  └─ scaler.pkl  
 ├─ data/  
 │  └─ Titanic.csv  
