@@ -2,6 +2,16 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+import base64
+
+# Page Configuration
+st.set_page_config(
+  page_title="Titanic Survival Prediction",
+  page_icon="🚢",
+  layout="centered"
+)
+
+add_bg_from_local("titanic_bg.jpg")
 
 # Load Model and Scaler
 with open ("models/logistic_model.pkl", "rb") as f:
