@@ -12,8 +12,8 @@ st.set_page_config(
 )
 
 # Background Image
-def add_bg_from_local(image_file):
-    with open(image_file, "rb") as f:
+def add_bg_from_local(titanic_bg.jpg):
+    with open(titanic_bg.jpg, "rb") as f:
         encoded_string = base64.b64encode(f.read())
     st.markdown(
         f"""
