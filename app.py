@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 # Background Image
-def add_bg_from_local(titanic_bg.jpg):
+def add_bg_from_repo(titanic_bg.jpg):
     with open(titanic_bg.jpg, "rb") as f:
         encoded_string = base64.b64encode(f.read())
     st.markdown(
@@ -28,8 +28,6 @@ def add_bg_from_local(titanic_bg.jpg):
         """,
         unsafe_allow_html=True
     )
-
-add_bg_from_local("titanic_bg.jpg")
 
 # Load Model and Scaler
 with open ("models/logistic_model.pkl", "rb") as f:
