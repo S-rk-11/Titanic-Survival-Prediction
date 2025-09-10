@@ -12,22 +12,21 @@ st.set_page_config(
 )
 
 # Background Image
-def add_bg_from_repo(titanic_bg.jpg):
-    with open(titanic_bg.jpg, "rb") as f:
-        encoded_string = base64.b64encode(f.read())
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url(data:image/jpg;base64,{encoded_string.decode()});
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+with open(titanic_bg.jpg, "rb") as f:
+  encoded_string = base64.b64encode(f.read())
+st.markdown(
+  f"""
+  <style>
+  .stApp {{
+      background-image: url(data:image/jpg;base64,{encoded_string.decode()});
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+  }}
+  </style>
+  """,
+  unsafe_allow_html=True
+)
 
 # Load Model and Scaler
 with open ("models/logistic_model.pkl", "rb") as f:
@@ -36,12 +35,18 @@ with open ("models/logistic_model.pkl", "rb") as f:
 with open ("models/scaler.pkl", "rb") as f:
   scaler = pickle.load(f)
   
-#App TItle
-st.title("Titanic Survival Prediction")
+#App Header
 st.markdown(
-  "This app predicts whether a passenger would have survived the Titanic disaster."
-  "based on input features."
+    """
+    <div style="background-color: rgba(255,255,255,0.85); padding: 20px; border-radius: 10px; text-align: center;">
+        <h1 style="color: #1f77b4;">🚢 Titanic Survival Prediction</h1>
+        <p style="font-size: 16px;">Predict whether a passenger would have survived the Titanic disaster based on input features.</p>
+    </div>
+    """,
+    unsafe_allow_html=True
 )
+
+st.write("")  # spacing
 
 # User Input
 Pclass = st.selectbox("Passenger Class (Pclass)", [1, 2, 3])
