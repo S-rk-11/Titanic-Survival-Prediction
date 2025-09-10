@@ -15,6 +15,19 @@ titanic-survival-prediction/
 ├─ requirements.txt  
 ├─ README.md  
 
+titanic-survival-prediction/
+├─ models/                  # Saved models & scaler
+│  ├─ logistic_model.pkl
+│  └─ scaler.pkl
+├─ data/                    # Dataset
+│  └─ Titanic.csv
+├─ notebooks/               # Training Notebooks
+│  ├─ logistic_regression.ipynb
+│  └─ xgbm_lgbm.ipynb
+├─ app.py                   # Streamlit app
+├─ requirements.txt         # Dependencies
+└─ README.md
+
 ## Workflow
 - **Data Preprocessing**: handling missing values, encoding categorical variables, scaling  
 - **Modeling**: Logistic Regression  
