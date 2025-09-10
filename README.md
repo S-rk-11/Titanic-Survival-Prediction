@@ -34,14 +34,14 @@ titanic-survival-prediction/
 Clone this repository and install dependencies:
 (```bash)
 
-git clone https://github.com/S-rk-11/titanic-survival-prediction.git
-cd titanic-survival-prediction
-pip install -r requirements.txt
-streamlit run app.py
+- git clone https://github.com/S-rk-11/titanic-survival-prediction.git
+- cd titanic-survival-prediction
+- pip install -r requirements.txt
+- streamlit run app.py 
 
 Author
 Shivani Kalghatgi
 
-LinkedIn:
-Kaggle:
-Email: shivanikalghatgi@gmail.com
+- LinkedIn:
+- Kaggle:
+- Email: shivanikalghatgi@gmail.com
