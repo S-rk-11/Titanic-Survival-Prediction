@@ -16,7 +16,7 @@ Built using **Python, Scikit-Learn, and Streamlit**, this project demonstrates s
 - **Tools:** Jupyter Notebook, GitHub  
 
 ## Demo
-https://titanic-survival-predictions-app.streamlit.app
+titanic-survival-predictions-app.streamlit.app
 
 ## Installation
 (```bash)
@@ -33,6 +33,6 @@ https://titanic-survival-predictions-app.streamlit.app
 ## Author
 Shivani Kalghatgi
 - Email: shivanikalghatgi@gmail.com
-- LinkedIn: https://www.linkedin.com/in/shivanikalghatgi
-- GitHub: https://github.com/S-rk-11
-- Kaggle: https://www.kaggle.com/shivanikalghatgi
+- LinkedIn: linkedin.com/in/shivanikalghatgi
+- GitHub: github.com/S-rk-11
+- Kaggle: kaggle.com/shivanikalghatgi
