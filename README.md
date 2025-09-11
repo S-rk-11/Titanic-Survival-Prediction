@@ -30,4 +30,9 @@ https://titanic-survival-predictions-app.streamlit.app
 - Clear survival probability predictions
 - Deployed Streamlit app for interactive use
 
-## 
+## Author
+Shivani Kalghatgi
+- Email: shivanikalghatgi@gmail.com
+- LinkedIn: linkedin.com/in/shivanikalghatgi
+- GitHub: 
+- Kaggle: kaggle.com/shivanikalghatgi
