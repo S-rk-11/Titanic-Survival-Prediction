@@ -16,17 +16,39 @@ with open("images/titanic_bg.jpg", "rb") as f:
   encoded_string = base64.b64encode(f.read())
   
 st.markdown(
-  f"""
-  <style>
-  .stApp {{
-      background-image: url(data:image/jpg;base64,{encoded_string.decode()});
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-  }}
-  </style>
-  """,
-  unsafe_allow_html=True
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/jpg;base64,{encoded_string.decode()});
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }}
+    /* Center header card */
+    .header-box {{
+        background-color: rgba(255, 255, 255, 0.92);
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        margin-bottom: 20px;
+    }}
+    /* Input widgets spacing */
+    .stSelectbox, .stNumberInput {{
+        margin-bottom: 15px !important;
+    }}
+    /* Result card */
+    .result-box {{
+        background-color: rgba(255,255,255,0.88);
+        padding: 15px;
+        border-radius: 12px;
+        margin-top: 20px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
 )
 
 # Load Model and Scaler
@@ -39,15 +61,13 @@ with open ("models/scaler.pkl", "rb") as f:
 #App Header
 st.markdown(
     """
-    <div style="background-color: rgba(255,255,255,0.85); padding: 20px; border-radius: 10px; text-align: center;">
-        <h1 style="color: #1f77b4;">🚢 Titanic Survival Prediction</h1>
-        <p style="font-size: 16px;">Predict whether a passenger would have survived the Titanic disaster based on input features.</p>
+    <div class="header-box">
+        <h1 style="color:#1f77b4; margin-bottom:10px;">🚢 Titanic Survival Prediction</h1>
+        <p style="font-size:16px; margin:0;">Predict whether a passenger would have survived the Titanic disaster based on input features.</p>
     </div>
     """,
     unsafe_allow_html=True
 )
-
-st.write("")  # spacing
 
 # User Input
 Pclass = st.selectbox("Passenger Class (Pclass)", [1, 2, 3])
@@ -78,8 +98,18 @@ prediction_proba = model.predict_proba(scaled_input)[0][1]
 
 # Output
 if prediction == 1:
-    st.success("The passenger **survived**")
+    result_text = "<p style='color:green; font-size:18px; font-weight:bold;'>✅ The passenger survived</p>"
 else:
-    st.error("The passenger did **not survived**.")
+    result_text = "<p style='color:red; font-size:18px; font-weight:bold;'>❌ The passenger did not survive</p>"
 
-st.write(f"**Survival Probability:** {round(prediction_proba *100, 2)}%")
+st.markdown(
+    f"""
+    <div class="result-box">
+        {result_text}
+        <p style="font-size:16px; margin-top:10px;">
+            <b>Survival Probability:</b> {round(prediction_proba*100, 2)}%
+        </p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
