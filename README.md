@@ -19,11 +19,11 @@ Built using **Python, Scikit-Learn, and Streamlit**, this project demonstrates s
 https://titanic-survival-predictions-app.streamlit.app
 
 ## Installation
-(```bash)
+(```bash
 - git clone https://github.com/S-rk-11/titanic-survival-prediction.git
 - cd titanic-survival-prediction
 - pip install -r requirements.txt
-- streamlit run app.py
+- streamlit run app.py )
 
 ## Results
 - Logistic Regression baseline - ~80% accuracy
