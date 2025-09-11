@@ -64,17 +64,18 @@ st.markdown(
 )
 
 # User Input
+Pclass = st.selectbox("Passenger Class (Pclass)", [1, 2, 3])
+
 col1, col2 = st.columns(2)
 
 with col1:
-    Pclass = st.selectbox("Passenger Class (Pclass)", [1, 2, 3])
     Sex = st.selectbox("Sex", ["male", "female"])
-    Age = st.number_input("Age", min_value=0, max_value=100, value=25)
+    Siblings = st.number_input("Number of Siblings Aboard", min_value=0, max_value=10, value=0)
+    Parents = st.number_input("Number of Parents Aboard", min_value=0, max_value=10, value=0)
 
 with col2:
-    Siblings = st.number_input("Number of Siblings Aboard", min_value=0, max_value=10, value=0)
+    Age = st.number_input("Age", min_value=0, max_value=100, value=25)
     Spouses = st.number_input("Number of Spouses Aboard", min_value=0, max_value=5, value=0)
-    Parents = st.number_input("Number of Parents Aboard", min_value=0, max_value=10, value=0)
     Children = st.number_input("Number of Children Aboard", min_value=0, max_value=10, value=0)
 
 Fare = st.number_input("Fare", min_value=0.0, value=32.2)
