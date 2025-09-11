@@ -98,9 +98,9 @@ prediction_proba = model.predict_proba(scaled_input)[0][1]
 
 # Output
 if prediction == 1:
-    result_text = "<p style='color:green; font-size:18px; font-weight:bold;'>✅ The passenger survived</p>"
+    result_text = "<p style='color:green; font-size:18px; font-weight:bold;'> The passenger survived</p>"
 else:
-    result_text = "<p style='color:red; font-size:18px; font-weight:bold;'>❌ The passenger did not survive</p>"
+    result_text = "<p style='color:red; font-size:18px; font-weight:bold;'> The passenger did not survive</p>"
 
 st.markdown(
     f"""
