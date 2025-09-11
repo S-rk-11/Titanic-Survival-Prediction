@@ -81,6 +81,9 @@ Fare = st.number_input("Fare", min_value=0.0, value=32.2)
 Embarked = st.selectbox("Port of Embarkation", ["S", "C", "Q"])
 
 # Data Preprocessing
+SibSp = Siblings + Spouses
+Parch = Parents + Children
+
 sex_encoded = 1 if Sex == 'male' else 0
 embarked_map = {"S": 1, "C": 0, "Q": 2}
 embarked_encoded = embarked_map[Embarked]
