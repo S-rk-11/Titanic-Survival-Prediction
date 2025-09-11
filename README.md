@@ -1,50 +1,30 @@
-# Titanic Survival Prediction
+# 🚢 Titanic Survival Prediction
 
 ## Project Overview
-This project predicts whether a passenger would have survived the Titanic disaster using a Logistic Regression model.  
-It demonstrates the machine learning workflow: preprocessing, model training, evaluation, and deployment with Streamlit.  
+An end-to-end **Machine Learning project** predicting passenger survival on the Titanic.  
+Built using **Python, Scikit-Learn, and Streamlit**, this project demonstrates skills in **EDA, feature engineering, model building, and deployment**.  
 
-## Project Structure
-titanic-survival-prediction/   
-├─ models/                  # Saved models & scaler   
-│  ├─ logistic_model.pkl   
-│  └─ scaler.pkl   
-├─ data/                    # Dataset   
-│  └─ Titanic.csv   
-├─ notebooks/               # Training Notebooks   
-│  ├─ logistic_regression.ipynb   
-│  └─ xgbm_lgbm.ipynb   
-├─ app.py                   # Streamlit app   
-├─ requirements.txt         # Dependencies   
-└─ README.md   
+## Project Highlights
+- **Data Preprocessing** - handled missing values, encoded categorical variables, applied scaling  
+- **Modeling** - Logistic Regression (baseline), with experiments on XGBoost & LightGBM  
+- **Evaluation** - Achieved ~ **80% accuracy** with clear metrics (confusion matrix, classification report)  
+- **Deployment** - Interactive **Streamlit web app** with a modern UI and background image  
 
-## Workflow
-- **Data Preprocessing**: handling missing values, encoding categorical variables, scaling  
-- **Modeling**: Logistic Regression  
-- **Evaluation**: Accuracy, confusion matrix, classification report  
-- **Deployment**: Streamlit app for interactive survival prediction
+## Tech Stack
+- **Languages:** Python  
+- **Libraries:** Pandas, NumPy, Scikit-Learn, XGBoost, LightGBM, Streamlit  
+- **Tools:** Jupyter Notebook, GitHub  
+
+## Quick Start
+(```bash)
+git clone https://github.com/S-rk-11/titanic-survival-prediction.git
+cd titanic-survival-prediction
+pip install -r requirements.txt
+streamlit run app.py
 
 ## Results
-- Model Used: **Logistic Regression**  
-- Accuracy: ~ **80%**  
+- Logistic Regression baseline - ~80% accuracy
+- Clear survival probability predictions
+- Deployed Streamlit app for interactive use
 
-## Next Steps
-- Improve model with advanced algorithms (Random Forest, XGBoost)  
-- Hyperparameter tuning for better accuracy  
-- Deploy app as a web app on **Streamlit Cloud** 
-
-## Installation
-Clone this repository and install dependencies:
-(```bash)
-
-- git clone https://github.com/S-rk-11/titanic-survival-prediction.git
-- cd titanic-survival-prediction
-- pip install -r requirements.txt
-- streamlit run app.py 
-
-Author
-Shivani Kalghatgi
-
-- LinkedIn:
-- Kaggle:
-- Email: shivanikalghatgi@gmail.com
+## 
