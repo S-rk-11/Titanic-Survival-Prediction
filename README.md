@@ -33,6 +33,6 @@ https://titanic-survival-predictions-app.streamlit.app
 ## Author
 Shivani Kalghatgi
 - Email: shivanikalghatgi@gmail.com
-- LinkedIn: linkedin.com/in/shivanikalghatgi
-- GitHub: 
-- Kaggle: kaggle.com/shivanikalghatgi
+- LinkedIn: https://www.linkedin.com/in/shivanikalghatgi
+- GitHub: https://github.com/S-rk-11
+- Kaggle: https://www.kaggle.com/shivanikalghatgi
