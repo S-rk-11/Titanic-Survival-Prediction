@@ -16,7 +16,7 @@ Built using **Python, Scikit-Learn, and Streamlit**, this project demonstrates s
 - **Tools:** Jupyter Notebook, GitHub  
 
 ## Demo
-titanic-survival-predictions-app.streamlit.app
+https://titanic-survival-predictions-app.streamlit.app
 
 ## Installation
 (```bash)
