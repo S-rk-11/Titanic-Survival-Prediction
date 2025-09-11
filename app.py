@@ -24,7 +24,6 @@ st.markdown(
         background-position: center;
         background-attachment: fixed;
     }}
-    /* Center header card */
     .header-box {{
         background-color: rgba(255, 255, 255, 0.92);
         padding: 20px;
@@ -33,11 +32,6 @@ st.markdown(
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         margin-bottom: 20px;
     }}
-    /* Input widgets spacing */
-    .stSelectbox, .stNumberInput {{
-        margin-bottom: 15px !important;
-    }}
-    /* Result card */
     .result-box {{
         background-color: rgba(255,255,255,0.88);
         padding: 15px;
@@ -70,11 +64,19 @@ st.markdown(
 )
 
 # User Input
-Pclass = st.selectbox("Passenger Class (Pclass)", [1, 2, 3])
-Sex = st.selectbox("Sex", ["male", "female"])
-Age = st.number_input("Age", min_value=0, max_value=100, value=25)
-SibSp = st.number_input("Number of Siblings/Spouses Aboard (SibSp)", min_value=0, max_value=10, value=0)
-Parch = st.number_input("Number of Parents/Children Aboard (Parch)", min_value=0, max_value=10, value=0)
+col1, col2 = st.columns(2)
+
+with col1:
+    Pclass = st.selectbox("Passenger Class (Pclass)", [1, 2, 3])
+    Sex = st.selectbox("Sex", ["male", "female"])
+    Age = st.number_input("Age", min_value=0, max_value=100, value=25)
+
+with col2:
+    Siblings = st.number_input("Number of Siblings Aboard", min_value=0, max_value=10, value=0)
+    Spouses = st.number_input("Number of Spouses Aboard", min_value=0, max_value=5, value=0)
+    Parents = st.number_input("Number of Parents Aboard", min_value=0, max_value=10, value=0)
+    Children = st.number_input("Number of Children Aboard", min_value=0, max_value=10, value=0)
+
 Fare = st.number_input("Fare", min_value=0.0, value=32.2)
 Embarked = st.selectbox("Port of Embarkation", ["S", "C", "Q"])
 
